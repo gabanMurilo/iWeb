@@ -1,0 +1,294 @@
+/* Evergreen-inspired Wiki stylesheet
+   File: styles/evergreen-wiki.css
+   - Clean neutral palette with green accent
+   - Sidebar + content layout like a wiki
+   - Responsive: single-column on narrow viewports
+   - Accessible contrast and comfortable readability
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --muted: #6b7280;
+    /* gray-500 */
+    --text: #0f172a;
+    /* near black */
+    --accent: #0b6b3a;
+    /* evergreen green */
+    --accent-weak: #def7ec;
+    --border: #e6e9ef;
+    --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    --radius: 8px;
+    --max-width: 1100px;
+}
+
+/* Base resets */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+/* Page container */
+header,
+footer,
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 18px
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 20px;
+    padding-bottom: 6px
+}
+
+header nav {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+header nav a {
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: transparent;
+    border: 1px solid transparent
+}
+
+header nav a:hover {
+    background: var(--accent-weak)
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--text)
+}
+
+header img {
+    max-height: 56px;
+    border-radius: 6px;
+    object-fit: cover
+}
+
+/* Main two-column layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+    padding-bottom: 24px;
+}
+
+/* Make layout responsive */
+@media (max-width:900px) {
+    main {
+        grid-template-columns: 1fr
+    }
+
+    header {
+        align-items: center;
+        text-align: center
+    }
+
+    header nav {
+        justify-content: center
+    }
+}
+
+/* Content area */
+main section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+main section h2,
+main section h3 {
+    margin-top: 0;
+    color: var(--text)
+}
+
+main section p {
+    margin: 0 0 12px 0
+}
+
+/* Sidebar */
+aside#conteudo_adicional {
+    position: relative;
+    top: 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+}
+
+aside h3 {
+    margin-top: 0
+}
+
+aside a {
+    display: block;
+    color: var(--accent);
+    margin-bottom: 6px
+}
+
+/* Tables - wiki-style clean table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 0.95rem
+}
+
+th {
+    background: linear-gradient(180deg, rgba(11, 107, 58, 0.04), transparent);
+    font-weight: 600
+}
+
+tr:last-child td {
+    border-bottom: none
+}
+
+/* Media responsiveness */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px
+}
+
+/* Callouts / important boxes */
+.callout {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(90deg, var(--accent-weak), transparent);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 10px 0;
+    color: var(--text)
+}
+
+/* Footer */
+footer {
+    padding: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem
+}
+
+/* Small helpers */
+.kicker {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.note {
+    font-size: 0.95rem;
+    color: var(--muted)
+}
+
+/* Accessibility: focus states */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(11, 107, 58, 0.18);
+    outline-offset: 2px
+}
+
+/* Table of contents style (optional) */
+.toc {
+    padding: 10px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.02), transparent);
+    border: 1px solid var(--border)
+}
+
+.toc a {
+    display: block;
+    padding: 6px 0
+}
+
+/* Minor typography tuning */
+b,
+strong {
+    color: var(--text);
+    font-weight: 700
+}
+
+.emph {
+    color: var(--text);
+    font-weight: 700;
+}
+
+strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Utility spacing */
+.u-gap {
+    margin-top: 12px
+}
+
+/* Print friendly */
+@media print {
+    body {
+        background: white
+    }
+
+    header img,
+    iframe {
+        display: none
+    }
+
+    main,
+    header,
+    footer {
+        max-width: 100%
+    }
+}
