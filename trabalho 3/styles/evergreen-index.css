@@ -1,10 +1,6 @@
-/* Evergreen-inspired Wiki stylesheet
-   File: styles/evergreen-wiki.css
-   - Clean neutral palette with green accent
-   - Sidebar + content layout like a wiki
-   - Responsive: single-column on narrow viewports
-   - Accessible contrast and comfortable readability
-*/
+/* Evergreen-inspired Wiki stylesheet (index page)
+   File: styles/evergreen-index.css
+   Copied from evergreen-wiki.css and scoped for index.html usage */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -99,14 +95,16 @@ header h1 {
 }
 
 header img {
-    max-height: 56px;
     border-radius: 6px;
-    object-fit: cover
+    object-fit: cover;
+    align-self: flex-start;
+    /* keep header image left-aligned */
+    margin-left: 0;
 }
 
 /* Main two-column layout */
 main {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 320px;
     gap: 28px;
     align-items: start;
@@ -117,6 +115,12 @@ main a {
     display: block;
 }
 
+.flex-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+}
 
 /* Make layout responsive */
 @media (max-width:900px) {
@@ -131,6 +135,11 @@ main a {
 
     header nav {
         justify-content: center
+    }
+
+    /* allow header image to center on small screens */
+    header img {
+        align-self: center;
     }
 }
 
@@ -203,11 +212,9 @@ tr:last-child td {
 img,
 video,
 iframe {
-    display: block;
-    margin: 0 auto;
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 6px
 }
 
 /* Callouts / important boxes */

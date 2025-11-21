@@ -1,10 +1,6 @@
-/* Evergreen-inspired Wiki stylesheet
-   File: styles/evergreen-wiki.css
-   - Clean neutral palette with green accent
-   - Sidebar + content layout like a wiki
-   - Responsive: single-column on narrow viewports
-   - Accessible contrast and comfortable readability
-*/
+/* Evergreen-inspired Wiki stylesheet (palmeiras page)
+   File: styles/evergreen-palmeiras.css
+   Copied from evergreen-wiki.css and scoped for palmeiras.html usage */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -98,25 +94,29 @@ header h1 {
     color: var(--text)
 }
 
-header img {
-    max-height: 56px;
-    border-radius: 6px;
-    object-fit: cover
+#logo img {
+    margin-left: 0;
+}
+
+#logo {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
 }
 
 /* Main two-column layout */
-main {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 28px;
-    align-items: start;
-    padding-bottom: 24px;
-}
 
 main a {
     display: block;
 }
 
+.flex-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+}
 
 /* Make layout responsive */
 @media (max-width:900px) {
@@ -127,6 +127,11 @@ main a {
     header {
         align-items: center;
         text-align: center
+    }
+
+    /* allow header image to center on small screens */
+    header img {
+        align-self: center;
     }
 
     header nav {
@@ -205,10 +210,12 @@ video,
 iframe {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 600px;
+    max-height: 600px;
     height: auto;
     border-radius: 6px;
 }
+
 
 /* Callouts / important boxes */
 .callout {
@@ -298,4 +305,13 @@ strong {
     footer {
         max-width: 100%
     }
+}
+
+#historia h2 {
+    text-align: center;
+}
+
+#idolos h4,
+#idolos h3 {
+    text-align: center;
 }

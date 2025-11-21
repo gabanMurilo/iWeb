@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palmeiras</title>
-    <link rel="stylesheet" href="styles/evergreen-wiki.css">
+    <link rel="stylesheet" href="styles/evergreen-palmeiras.css">
 </head>
 
 <body>
@@ -18,16 +18,20 @@
         <h1>Sociedade Esportiva Palmeiras</h1>
     </header>
     <main>
-        <img src="imagens/Palmeiras_logo.svg.webp" alt="Logo do Palmeiras" width="200">
-        <section>
-            <h2><span class="emph">Conteúdo</span></h2>
-            <nav>
-                <a href="#historia" title="Clique aqui para ir para a seção de história">História do Clube</a>
-                <a href="#titulos" title="Clique aqui para ir para a seção de Títulos do Clube">Títulos</a>
-                <a href="#idolos" title="Clique aqui para ir para a seção de Ídolos">Ídolos</a>
-                <a href="#curiosidades" title="Clique aqui para ir para a seção de curiosidades">Curiosidades</a>
-            </nav>
-        </section>
+        <div class="flex-container">
+            <section id="logo">
+                <img src="imagens/Palmeiras_logo.svg.webp" alt="Logo do Palmeiras" width="200">
+            </section>
+            <section>
+                <h2><span class="emph">Conteúdo</span></h2>
+                <nav>
+                    <a href="#historia" title="Clique aqui para ir para a seção de história">História do Clube</a>
+                    <a href="#titulos" title="Clique aqui para ir para a seção de Títulos do Clube">Títulos</a>
+                    <a href="#idolos" title="Clique aqui para ir para a seção de Ídolos">Ídolos</a>
+                    <a href="#curiosidades" title="Clique aqui para ir para a seção de curiosidades">Curiosidades</a>
+                </nav>
+            </section>
+        </div>
         <section id="historia">
             <h2>História do Clube</h2>
             <ul>
@@ -39,9 +43,9 @@
                     das maiores torcidas do país.</li>
                 <li>O estádio do clube é o Allianz Parque (antigo Palestra Itália), um dos mais modernos do Brasil.</li>
             </ul>
+            <img src="imagens/Elenco-Palmeiras-2021.webp" alt="Foto do time do Palmeiras de 2021" width="900"
+                height="500" />
         </section>
-        <img src="imagens/Elenco-Palmeiras-2021.webp" alt="Foto do time do Palmeiras de 2021" width="900"
-            height="500" />
         <section id="titulos">
             <h3>Títulos</h3>
             <table>
@@ -87,11 +91,11 @@
                 </tbody>
             </table>
         </section>
-        <article id="idolos">
-            <h4>Principais ídolos do time</h4>
+
+        <section id="idolos">
+            <h3>Principais ídolos do time</h3>
             <section>
-                <span class="emph">Abel Ferreira</span> <br />
-                22/12/1978 <br />
+                <h4><span class="emph">Abel Ferreira</span> (22/12/1978)</h4>
                 <p>Abel Ferreira é o técnico mais vitorioso da história recente do Palmeiras. O treinador português
                     chegou ao clube em 2020 e conquistou títulos importantes, como duas Copas Libertadores (2020 e
                     2021), Copa do Brasil (2020), Campeonato Brasileiro (2022 e 2023), Recopa Sul-Americana (2022) e
@@ -102,8 +106,7 @@
                     height="500" />
             </section>
             <section>
-                <span class="emph">Marcos</span> <br />
-                04/08/1973 <br />
+                <h4><span class="emph">Marcos</span> (04/08/1973)</h4>
                 <p>Marcos Roberto Silveira Reis, conhecido como "São Marcos", é um dos maiores ídolos da história do
                     Palmeiras. Goleiro titular na conquista da Libertadores de 1999, ficou marcado por defesas
                     milagrosas, lealdade ao clube e identificação com a torcida. Atuou no Palmeiras de 1992 a 2012,
@@ -111,15 +114,17 @@
                 <img src="imagens/marcos.jpg" alt="Foto de Marcos jogando pelo Palmeiras" width="900" height="500" />
             </section>
             <section>
-                <span class="emph">Ademir da Guia</span> <br />
-                03/04/1942 <br />
+                <h4><span class="emph">Ademir da Guia</span> (03/04/1942)</h4>
                 <p>Ademir da Guia, o "Divino", é considerado o maior jogador da história do Palmeiras. Meio-campista
-                    elegante e técnico, defendeu o clube de 1961 a 1977, conquistando diversos títulos e tornando-se o
-                    atleta que mais vestiu a camisa alviverde. É referência de talento, respeito e amor ao clube.</p>
+                    elegante e técnico, defendeu o clube de 1961 a 1977, conquistando diversos títulos e tornando-se
+                    o
+                    atleta que mais vestiu a camisa alviverde. É referência de talento, respeito e amor ao clube.
+                </p>
                 <img src="imagens/ademir-da-guia.jpeg" alt="Foto de Ademir da Guia jogando pelo Palmeiras" width="900"
                     height="500" />
             </section>
-        </article>
+        </section>
+
         <aside id="curiosidades">
             <h5>Curiosidades</h5>
             <ul>
