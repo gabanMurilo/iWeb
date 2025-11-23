@@ -1,18 +1,11 @@
-/* Evergreen-inspired Wiki stylesheet (palmeiras page)
-   File: styles/evergreen-palmeiras.css
-   Copied from evergreen-wiki.css and scoped for palmeiras.html usage */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
     --bg: #f6f7f9;
     --panel: #ffffff;
     --muted: #6b7280;
-    /* gray-500 */
     --text: #0f172a;
-    /* near black */
     --accent: #0b6b3a;
-    /* evergreen green */
     --accent-weak: #def7ec;
     --border: #e6e9ef;
     --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
@@ -20,7 +13,6 @@
     --max-width: 1100px;
 }
 
-/* Base resets */
 * {
     box-sizing: border-box
 }
@@ -49,7 +41,6 @@ a:hover {
     text-decoration: underline
 }
 
-/* Page container */
 header,
 footer,
 main {
@@ -105,8 +96,6 @@ header h1 {
     border: none;
 }
 
-/* Main two-column layout */
-
 main a {
     display: block;
 }
@@ -118,7 +107,6 @@ main a {
     align-items: start;
 }
 
-/* Make layout responsive */
 @media (max-width:900px) {
     main {
         grid-template-columns: 1fr
@@ -129,7 +117,6 @@ main a {
         text-align: center
     }
 
-    /* allow header image to center on small screens */
     header img {
         align-self: center;
     }
@@ -139,7 +126,6 @@ main a {
     }
 }
 
-/* Content area */
 main section {
     background: var(--panel);
     border: 1px solid var(--border);
@@ -159,7 +145,6 @@ main section p {
     margin: 0 0 12px 0
 }
 
-/* Sidebar */
 aside#conteudo_adicional {
     position: relative;
     top: 0;
@@ -180,7 +165,6 @@ aside a {
     margin-bottom: 6px
 }
 
-/* Tables - wiki-style clean table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -204,7 +188,6 @@ tr:last-child td {
     border-bottom: none
 }
 
-/* Media responsiveness */
 img,
 video,
 iframe {
@@ -216,8 +199,6 @@ iframe {
     border-radius: 6px;
 }
 
-
-/* Callouts / important boxes */
 .callout {
     border-left: 4px solid var(--accent);
     background: linear-gradient(90deg, var(--accent-weak), transparent);
@@ -227,7 +208,6 @@ iframe {
     color: var(--text)
 }
 
-/* Footer */
 footer {
     padding: 18px;
     text-align: center;
@@ -235,76 +215,15 @@ footer {
     font-size: 0.95rem
 }
 
-/* Small helpers */
-.kicker {
-    font-size: 0.85rem;
-    color: var(--muted);
-    font-weight: 600
-}
-
-.note {
-    font-size: 0.95rem;
-    color: var(--muted)
-}
-
-/* Accessibility: focus states */
 a:focus,
 button:focus {
     outline: 3px solid rgba(11, 107, 58, 0.18);
     outline-offset: 2px
 }
 
-/* Table of contents style (optional) */
-.toc {
-    padding: 10px;
-    border-radius: 6px;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.02), transparent);
-    border: 1px solid var(--border)
-}
-
-.toc a {
-    display: block;
-    padding: 6px 0
-}
-
-/* Minor typography tuning */
-b,
-strong {
-    color: var(--text);
-    font-weight: 700
-}
-
 .emph {
     color: var(--text);
     font-weight: 700;
-}
-
-strong {
-    color: var(--text);
-    font-weight: 700;
-}
-
-/* Utility spacing */
-.u-gap {
-    margin-top: 12px
-}
-
-/* Print friendly */
-@media print {
-    body {
-        background: white
-    }
-
-    header img,
-    iframe {
-        display: none
-    }
-
-    main,
-    header,
-    footer {
-        max-width: 100%
-    }
 }
 
 #historia h2 {
@@ -314,4 +233,9 @@ strong {
 #idolos h4,
 #idolos h3 {
     text-align: center;
+}
+
+#footer {
+    background: #004109;
+    color: #ffffff;
 }
