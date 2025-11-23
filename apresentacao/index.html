@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Evergreen — Apresentação dos Bagres</title>
+    <link rel="stylesheet" href="styles/presentation.css">
+</head>
+
+<body>
+    <main class="wrap">
+        <header class="hero">
+            <div class="hero-left">
+                <div class="avatar" aria-hidden="true">EG</div>
+                <div>
+                    <h1>Evergreen — Biblioteca UI</h1>
+                    <p class="muted">Exemplo de página para apresentação — componentes essenciais</p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <button id="primaryBtn" class="btn btn-primary">Ação Principal</button>
+            </div>
+        </header>
+
+        <section class="controls">
+            <label class="checkbox">
+                <input id="sampleCheckbox" type="checkbox">
+                <span>Mostrar detalhes</span>
+            </label>
+            <span id="checkboxState" class="note">Checkbox: off</span>
+        </section>
+
+        <section class="panel">
+            <h2>Tabela de Exemplo</h2>
+            <table class="data">
+                <thead>
+                    <tr>
+                        <th>Bagre</th>
+                        <th>Função</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Murilo</td>
+                        <td>Designer</td>
+                        <td><span class="chip chip-ok">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mario</td>
+                        <td>Desenvolvedor</td>
+                        <td><span class="chip chip-warn">Em análise</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rafael</td>
+                        <td>Gerente</td>
+                        <td><span class="chip chip-danger">Bloqueado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer class="site-footer">
+            <div>© 2025 Apresentação Evergreen — Bagres</div>
+            <div class="footer-right">
+                <button id="secondaryBtn" class="btn">Secundário</button>
+            </div>
+        </footer>
+    </main>
+
+    <script src="scripts/presentation.js"></script>
+</body>
+
+</html>
